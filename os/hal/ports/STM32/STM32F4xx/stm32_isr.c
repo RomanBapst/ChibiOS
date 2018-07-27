@@ -189,25 +189,25 @@ OSAL_IRQ_HANDLER(Vector9C) {
  *
  * @isr
  */
-OSAL_IRQ_HANDLER(VectorE0) {
-  uint32_t pr;
+// OSAL_IRQ_HANDLER(VectorE0) {
+//   uint32_t pr;
 
-  OSAL_IRQ_PROLOGUE();
+//   OSAL_IRQ_PROLOGUE();
 
-  pr = EXTI->PR;
-  pr &= EXTI->IMR & ((1U << 10) | (1U << 11) | (1U << 12) | (1U << 13) |
-                     (1U << 14) | (1U << 15));
-  EXTI->PR = pr;
+//   pr = EXTI->PR;
+//   pr &= EXTI->IMR & ((1U << 10) | (1U << 11) | (1U << 12) | (1U << 13) |
+//                      (1U << 14) | (1U << 15));
+//   EXTI->PR = pr;
 
-  exti_serve_irq(pr, 10);
-  exti_serve_irq(pr, 11);
-  exti_serve_irq(pr, 12);
-  exti_serve_irq(pr, 13);
-  exti_serve_irq(pr, 14);
-  exti_serve_irq(pr, 15);
+//   exti_serve_irq(pr, 10);
+//   exti_serve_irq(pr, 11);
+//   exti_serve_irq(pr, 12);
+//   exti_serve_irq(pr, 13);
+//   exti_serve_irq(pr, 14);
+//   exti_serve_irq(pr, 15);
 
-  OSAL_IRQ_EPILOGUE();
-}
+//   OSAL_IRQ_EPILOGUE();
+// }
 #endif
 
 #endif /* HAL_USE_PAL && (PAL_USE_WAIT || PAL_USE_CALLBACKS) */
