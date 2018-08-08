@@ -20,8 +20,8 @@
  */
 MEMORY
 {
-    flash0  : org = 0x08000000, len = 512k
-    flash1  : org = 0x00000000, len = 0
+    flash0  : org = 0x08000000, len = 16k
+    flash1  : org = 0x0800C000, len = 480k
     flash2  : org = 0x00000000, len = 0
     flash3  : org = 0x00000000, len = 0
     flash4  : org = 0x00000000, len = 0
@@ -46,23 +46,23 @@ REGION_ALIAS("VECTORS_FLASH", flash0);
 REGION_ALIAS("VECTORS_FLASH_LMA", flash0);
 
 /* Flash region to be used for constructors and destructors.*/
-REGION_ALIAS("XTORS_FLASH", flash0);
-REGION_ALIAS("XTORS_FLASH_LMA", flash0);
+REGION_ALIAS("XTORS_FLASH", flash1);
+REGION_ALIAS("XTORS_FLASH_LMA", flash1);
 
 /* Flash region to be used for code text.*/
-REGION_ALIAS("TEXT_FLASH", flash0);
-REGION_ALIAS("TEXT_FLASH_LMA", flash0);
+REGION_ALIAS("TEXT_FLASH", flash1);
+REGION_ALIAS("TEXT_FLASH_LMA", flash1);
 
 /* Flash region to be used for read only data.*/
-REGION_ALIAS("RODATA_FLASH", flash0);
-REGION_ALIAS("RODATA_FLASH_LMA", flash0);
+REGION_ALIAS("RODATA_FLASH", flash1);
+REGION_ALIAS("RODATA_FLASH_LMA", flash1);
 
 /* Flash region to be used for various.*/
-REGION_ALIAS("VARIOUS_FLASH", flash0);
-REGION_ALIAS("VARIOUS_FLASH_LMA", flash0);
+REGION_ALIAS("VARIOUS_FLASH", flash1);
+REGION_ALIAS("VARIOUS_FLASH_LMA", flash1);
 
 /* Flash region to be used for RAM(n) initialization data.*/
-REGION_ALIAS("RAM_INIT_FLASH_LMA", flash0);
+REGION_ALIAS("RAM_INIT_FLASH_LMA", flash1);
 
 /* RAM region to be used for Main stack. This stack accommodates the processing
    of all exceptions and interrupts.*/
