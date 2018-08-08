@@ -71,7 +71,7 @@
 #define STM32F4
 #endif /* STM32F4 */
 
-#define STM32F407xx
+#define STM32F446xx
 
 
 /* Uncomment the line below according to the target STM32 device used in your
