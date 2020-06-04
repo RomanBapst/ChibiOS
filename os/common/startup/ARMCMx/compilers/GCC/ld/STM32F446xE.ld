@@ -20,8 +20,8 @@
  */
 MEMORY
 {
-    flash0  : org = 0x08000000, len = 16k
-    flash1  : org = 0x0800C000, len = 480k
+    flash0  : org = 0x0800C000, len = 16k
+    flash1  : org = 0x08010000, len = 464k
     flash2  : org = 0x00000000, len = 0
     flash3  : org = 0x00000000, len = 0
     flash4  : org = 0x00000000, len = 0
